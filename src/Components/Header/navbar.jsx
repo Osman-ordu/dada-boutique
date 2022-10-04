@@ -1,16 +1,18 @@
 import React from 'react'
-import { InputGroup, Input, Button } from 'reactstrap'
+import { InputGroup, Input, Button,Navbar } from 'reactstrap'
 import { FiSearch } from 'react-icons/fi'
 import  logo  from './../../assets/image/babypapa.png'
 
-const navbar = () => {
+
+const navbar = ({getProduct}) => {
+
     return (
-        <navbar>
+        <div className='navbar'>
             <div className='container'>
-                <img src={logo} alt="babypapa" style={{width:'150px'}} />
+                <img src={logo} alt="babypapa" style={{width:'200px'}} />
                 <InputGroup className='input-group'>
                     <Input type="search" placeholder='Aramak istediğin ürünü yaz, Kolayca bul!' />
-                    <Button >
+                    <Button onClick={getProduct} >
                         <FiSearch size={20} />
                     </Button>
                 </InputGroup>
@@ -19,7 +21,7 @@ const navbar = () => {
                     <button className='basket'>Sepetim</button>
                 </div>
             </div>
-        </navbar>
+        </div>
     )
 }
 

@@ -1,11 +1,14 @@
 import React from 'react'
+import { useState } from 'react';
 import './header.scss'
 import { AiFillFacebook } from 'react-icons/ai';
 import { AiFillInstagram } from 'react-icons/ai';
 import { BsHeadphones } from 'react-icons/bs';
 import Navbar from './navbar';
 import ProductTitles from './productTitles';
-const header = () => {
+
+const header = ({getProduct}) => {
+
     return (
         <header>
             <div className='container'>
@@ -34,7 +37,7 @@ const header = () => {
                             <a href="/">İletişim</a>
                         </span>
                     </div>
-                    <Navbar />
+                    <Navbar getProduct={getProduct}/>
                     <ProductTitles />
                 </div>
             </div>
