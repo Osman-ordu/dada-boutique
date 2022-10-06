@@ -37,8 +37,8 @@ const header = ({getProduct}) => {
                             <a href="/">İletişim</a>
                         </span>
                     </div>
-                    <Navbar getProduct={getProduct}/>
-                    <ProductTitles />
+                    <Navbar />
+                    <ProductTitles getProduct={getProduct}/>
                 </div>
             </div>
         </header>

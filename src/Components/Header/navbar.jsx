@@ -1,10 +1,10 @@
 import React from 'react'
-import { InputGroup, Input, Button,Navbar } from 'reactstrap'
+import { InputGroup, Input, Button } from 'reactstrap'
 import { FiSearch } from 'react-icons/fi'
 import  logo  from './../../assets/image/babypapa.png'
 
 
-const navbar = ({getProduct}) => {
+const navbar = () => {
 
     return (
         <div className='navbar'>
@@ -12,7 +12,7 @@ const navbar = ({getProduct}) => {
                 <img src={logo} alt="babypapa" style={{width:'200px'}} />
                 <InputGroup className='input-group'>
                     <Input type="search" placeholder='Aramak istediğin ürünü yaz, Kolayca bul!' />
-                    <Button onClick={getProduct} >
+                    <Button >
                         <FiSearch size={20} />
                     </Button>
                 </InputGroup>
