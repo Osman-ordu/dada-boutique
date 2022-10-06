@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MenProducts = ({ data }) => {
+const MenProducts = ({ data, filter }) => {
     let prefix = 'menTextile-'
     let baseId = 1;
     const cardId = () => baseId++;
@@ -14,7 +14,7 @@ const MenProducts = ({ data }) => {
                     <div id={prefix + cardId()} className='card' key={index}>
                         <img className='card-img' src={image} alt="" />
                         <p className='card-title'>{title}</p>
-                        <div className='card-price'>{price}$</div>
+                        <div className='card-price'>{price}</div>
                         <button>sepete ekle</button>
                     </div>
 
