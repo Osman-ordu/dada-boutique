@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MenProducts = ({ data, filter }) => {
+const MenProducts = ({ data }) => {
     let prefix = 'menTextile-'
     let baseId = 1;
     const cardId = () => baseId++;

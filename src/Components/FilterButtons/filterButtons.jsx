@@ -1,29 +1,17 @@
 import React from "react";
 
 const FilterButtons = ({ data, setFilter }) => {
-
-
-    const filterRisingPrice = (up,down) => {
-        const filterPrice = data.sort((a, b) => {
-            up = parseFloat(a[1].price)
-            down =   parseFloat(b[1].price)
-            return up - down;
-        },Number);
-
-        setFilter(filterPrice)
-        setFilter([])
-    }
     
-    const filterDecreasingPrice = (up,down) => {
-        const filterPrice = data.sort((a, b) => {
-            up = parseFloat(a[1].price)
-            down =   parseFloat(b[1].price)
-            return down - up;
-        },Number);
-
-        setFilter(filterPrice)
+    const filterRisingPrice = () => {
+        setFilter(() => data.sort((a, b) => parseFloat(a[1].price) - parseFloat(b[1].price), Number))
         setFilter([])
     }
+    const filterDecreasingPrice = () => {
+        setFilter(() => data.sort((a, b) => parseFloat(b[1].price) - parseFloat(a[1].price), Number))
+        setFilter([])
+    }
+
+
 
     return (
         <div className='btn-group'>
@@ -32,24 +20,19 @@ const FilterButtons = ({ data, setFilter }) => {
                     Fiyata göre(Artan)
                 </span>
             </button>
-            <button onClick={filterDecreasingPrice} className='btn'>
+            <button onClick={filterDecreasingPrice}  className='btn'>
                 <span>
                     Fiyata göre(Azalan)
                 </span>
             </button>
-            <button onClick={filterAlphabetically} className='btn'>
+            <button className='btn'>
                 <span>
                     Ürün Adına Göre (A-Z)
                 </span>
             </button>
-            <button onClick={filterReverseAlpabetically} className='btn'>
-                <span>
-                    Ürün Adına Göre (Z-A)
-                </span>
-            </button>
             <button className='btn'>
                 <span>
-                    Stoktakiler
+                    Ürün Adına Göre (Z-A)
                 </span>
             </button>
         </div>
