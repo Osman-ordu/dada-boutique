@@ -1,0 +1,32 @@
+.product-titles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+    background-color: #171717;
+
+    .container {
+        ul {
+            li {
+                width: 100%;
+                text-align: center;
+                padding: 20px;
+                a {
+                    color: #fff;
+                    width: 25%;
+                    padding: 20px 30px;
+                    border:1px solid #fff;
+                    transition: all 0.4s;
+                    &:hover {
+                        color: #171717;
+                        background-color: #fff;
+                        padding: 24px 38px;    
+                        
+                    }
+                }
+               
+            }
+        }
+    }
+}

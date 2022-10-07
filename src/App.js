@@ -36,7 +36,7 @@ const App = () => {
   return (
     <>
       <Header getProduct={clickHandler} />
-      <Categories filter={filter} setFilter={setFilter} data={data} />
+      <Categories  filter={filter} setFilter={setFilter} data={data} />
     </>
   )
 }

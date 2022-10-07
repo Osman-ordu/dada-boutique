@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import './../../Styles/categoryTitles.styles.scss'
 
 const productTitles = ({getProduct}) => {
   return (

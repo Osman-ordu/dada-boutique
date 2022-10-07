@@ -13,11 +13,10 @@ import FilterButtons from '../../Components/FilterButtons/filterButtons';
 const Categories = ({ data }) => {
     const [filter, setFilter] = useState({})
 
-
     return (
         <>
             <div className='categories-container'>
-                <FilterButtons data={data} setFilter={setFilter} />
+               {data && <FilterButtons data={data} setFilter={setFilter} /> } 
                 <Routes>
                     <Route path='men-section' element={<MenProducts data={data} filter={filter} />} />
                     <Route path='women-section' element={<WomenProducts data={data} />} />

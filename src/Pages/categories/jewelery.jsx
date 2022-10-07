@@ -1,22 +1,16 @@
 import React from 'react'
+import Card from '../../Components/Containers/card';
 
 const Jewelery = ({ data}) => {
-  let prefix = 'jewelery-'
-  let baseId = 1;
-  const cardId = () => baseId++;
+ 
   return (
     <>
       { data && data.filter((product) => {
         return product[1].category === "jewelery"
-      }).map((product, index) => {
+      }).map((product) => {
         const { image, title, price } = product[1];
         return (
-          <div id={prefix + cardId()} className='card' key={index}>
-            <img className='card-img' src={image} alt="" />
-            <p className='card-title'>{title}</p>
-            <div className='card-price'>{price}</div>
-            <button>sepete ekle</button>
-          </div>
+          <Card  image={image} title={title} price={price} />
 
         )
       })}

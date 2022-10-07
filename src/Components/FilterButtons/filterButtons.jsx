@@ -1,7 +1,9 @@
 import React from "react";
+import './../../Styles/filterButtons.styles.scss'
 
 const FilterButtons = ({ data, setFilter }) => {
     
+
     const filterRisingPrice = () => {
         setFilter(() => data.sort((a, b) => parseFloat(a[1].price) - parseFloat(b[1].price), Number))
         setFilter([])
@@ -10,7 +12,14 @@ const FilterButtons = ({ data, setFilter }) => {
         setFilter(() => data.sort((a, b) => parseFloat(b[1].price) - parseFloat(a[1].price), Number))
         setFilter([])
     }
-
+    const filterAlphabetically = () => {
+        setFilter(data.sort((a, b) => a[1].title.localeCompare(b[1].title)))
+        setFilter([])
+    }
+    const filterReverseAlphabetically = () => {
+        setFilter(data.sort((a, b) => a[1].title.localeCompare(b[1].title)).reverse())
+        setFilter([])
+    }
 
 
     return (
@@ -20,17 +29,17 @@ const FilterButtons = ({ data, setFilter }) => {
                     Fiyata göre(Artan)
                 </span>
             </button>
-            <button onClick={filterDecreasingPrice}  className='btn'>
+            <button onClick={filterDecreasingPrice} className='btn'>
                 <span>
                     Fiyata göre(Azalan)
                 </span>
             </button>
-            <button className='btn'>
+            <button onClick={filterAlphabetically} className='btn'>
                 <span>
                     Ürün Adına Göre (A-Z)
                 </span>
             </button>
-            <button className='btn'>
+            <button onClick={filterReverseAlphabetically} className='btn'>
                 <span>
                     Ürün Adına Göre (Z-A)
                 </span>

@@ -1,12 +1,10 @@
 import React from 'react'
-import { useState } from 'react';
-import './header.scss'
+import './../../Styles/header.scss'
 import { AiFillFacebook } from 'react-icons/ai';
 import { AiFillInstagram } from 'react-icons/ai';
 import { BsHeadphones } from 'react-icons/bs';
 import Navbar from './navbar';
-import ProductTitles from './productTitles';
-
+import CategoryTitles from './../../Components/Containers/categoryTitles'
 const header = ({getProduct}) => {
 
     return (
@@ -38,7 +36,7 @@ const header = ({getProduct}) => {
                         </span>
                     </div>
                     <Navbar />
-                    <ProductTitles getProduct={getProduct}/>
+                    <CategoryTitles getProduct={getProduct}/>
                 </div>
             </div>
         </header>
