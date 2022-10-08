@@ -1,5 +1,7 @@
 header {
     .container {
+        display: flex;
+
         .header-group {
             .header-items {
                 background-color: #E5E5E5;
@@ -36,12 +38,8 @@ header {
             align-items: center;
             justify-content: space-around;
 
-
-            .button-group {
-                button {
-                    padding: 10px 20px;
-                    margin: 5px;
-                }
+            .logo-image {
+                width: 200px;
             }
         }
 
@@ -49,12 +47,23 @@ header {
             display: flex;
 
             input {
-
-                padding: 5px 40px;
+                border: none;
+                border-bottom: 1px solid #171717;
+                width: 100%;
+                text-align: center;
+                &:focus {
+                    outline: none;
+                }
             }
 
+
+
+
             button {
-                padding: 5px;
+                border: none;
+                background-color: transparent;
+                padding: 5px 15px;
+
             }
         }
     }
@@ -79,6 +88,20 @@ header {
                         text-decoration: none;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    .navbar {
+        .container {
+            display: flex;
+            flex-direction: column;
+
+            .logo-image {
+
+                max-width: 120px;
             }
         }
     }

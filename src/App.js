@@ -12,6 +12,7 @@ const App = () => {
   const [refresh, setRefresh] = useState(false)
   const [filter, setFilter] = useState({});
 
+
   const clickHandler = () => { setRefresh(!refresh) }
 
   const url = 'https://fakestoreapi.com/products'
@@ -30,13 +31,14 @@ const App = () => {
   useEffect(() => {
     if (refresh) {
       getData()
-      
+
     }
   }, [refresh])
   return (
     <>
-      <Header getProduct={clickHandler} />
-      <Categories  filter={filter} setFilter={setFilter} data={data} />
+      <Header getProduct={clickHandler}  />
+      <Categories filter={filter} setFilter={setFilter} data={data} />
+
     </>
   )
 }

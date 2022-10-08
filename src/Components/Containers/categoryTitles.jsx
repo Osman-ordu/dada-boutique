@@ -8,16 +8,16 @@ const productTitles = ({getProduct}) => {
       <div className='container'>
         <ul>
           <li>
-            <NavLink onClick={getProduct} to='men-section'>Men</NavLink>
+            <NavLink onClick={getProduct} to='men-section'>Erkek</NavLink>
           </li>
           <li>
-            <NavLink onClick={getProduct} to='women-section'>Women</NavLink>
+            <NavLink onClick={getProduct} to='women-section'>Kadın</NavLink>
           </li>
           <li>
-            <NavLink onClick={getProduct} to='jewelery'>Jewelery</NavLink>
+            <NavLink onClick={getProduct} to='jewelery'>Aksesuar</NavLink>
           </li>
           <li>
-            <NavLink onClick={getProduct} to='electronics'>Electronics</NavLink>
+            <NavLink onClick={getProduct} to='electronics'>Elektronik</NavLink>
           </li>
 
 

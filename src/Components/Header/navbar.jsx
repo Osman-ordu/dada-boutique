@@ -1,25 +1,15 @@
 import React from 'react'
-import { InputGroup, Input, Button } from 'reactstrap'
-import { FiSearch } from 'react-icons/fi'
+import SearchBox from '../searchBox'
 import  logo  from './../../assets/image/babypapa.png'
 
 
-const navbar = () => {
+const navbar = ({getProduct,setSearch}) => {
 
     return (
         <div className='navbar'>
             <div className='container'>
-                <img src={logo} alt="babypapa" style={{width:'200px'}} />
-                <InputGroup className='input-group'>
-                    <Input type="search" placeholder='Aramak istediğin ürünü yaz, Kolayca bul!' />
-                    <Button >
-                        <FiSearch size={20} />
-                    </Button>
-                </InputGroup>
-                <div className='button-group'>
-                    <button className='login-sign-up'>Giriş Yap/Üye Ol</button>
-                    <button className='basket'>Sepetim</button>
-                </div>
+                <img src={logo} alt="logo" className='logo-image' />
+                <SearchBox getProduct={getProduct} setSearch={setSearch} />       
             </div>
         </div>
     )

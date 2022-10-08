@@ -6,10 +6,10 @@ const Electronics = ({ data }) => {
     <>
       {data && data.filter((product) => {
         return product[1].category === "electronics"
-      }).map((product) => {
+      }).map((product, index) => {
         const { image, title, price } = product[1];
         return (
-          <Card image={image} title={title} price={price} />
+          <Card key={index} image={image} title={title} price={price} />
         )
       })}
     </>

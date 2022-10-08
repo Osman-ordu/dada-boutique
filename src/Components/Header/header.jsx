@@ -5,8 +5,9 @@ import { AiFillInstagram } from 'react-icons/ai';
 import { BsHeadphones } from 'react-icons/bs';
 import Navbar from './navbar';
 import CategoryTitles from './../../Components/Containers/categoryTitles'
-import  headerImage  from './../../assets/image/home-image-portre.jpg'
-const header = ({ getProduct }) => {
+import headerImage from './../../assets/image/home-image-portre.jpg'
+
+const header = ({ getProduct,setSearch }) => {
 
     return (
         <header>
@@ -30,16 +31,15 @@ const header = ({ getProduct }) => {
                                 </a>
                             </span>
                         </div>
-
                         <span>
                             <a href="/">Sipariş Takip</a>
                             <a href="/">İletişim</a>
                         </span>
                     </div>
-                    <Navbar />
+                    <Navbar getProduct={getProduct} setSearch={setSearch} />
                     <CategoryTitles getProduct={getProduct} />
                     <div>
-                        <img src={headerImage} alt="" style={{width:'100%'}} />
+                        <img src={headerImage} alt="" style={{ width: '100%' }} />
                     </div>
                 </div>
             </div>
