@@ -5,7 +5,8 @@ import { AiFillInstagram } from 'react-icons/ai';
 import { BsHeadphones } from 'react-icons/bs';
 import Navbar from './navbar';
 import CategoryTitles from './../../Components/Containers/categoryTitles'
-const header = ({getProduct}) => {
+import  headerImage  from './../../assets/image/home-image-portre.jpg'
+const header = ({ getProduct }) => {
 
     return (
         <header>
@@ -15,17 +16,17 @@ const header = ({getProduct}) => {
                         <div className='header-social'>
                             <span className='header-icon icon-phone'>
                                 <a href="tel:+6494461709">
-                                    <BsHeadphones /> 3244234
-                                    </a>
+                                    <BsHeadphones size={20} />
+                                </a>
                             </span>
                             <span className='header-icon icon-facebook'>
                                 <a href="">
-                                    <AiFillFacebook />
+                                    <AiFillFacebook size={20} />
                                 </a>
                             </span>
                             <span className='header-icon icon-instagram'>
                                 <a href="">
-                                    <AiFillInstagram />
+                                    <AiFillInstagram size={20} />
                                 </a>
                             </span>
                         </div>
@@ -36,7 +37,10 @@ const header = ({getProduct}) => {
                         </span>
                     </div>
                     <Navbar />
-                    <CategoryTitles getProduct={getProduct}/>
+                    <CategoryTitles getProduct={getProduct} />
+                    <div>
+                        <img src={headerImage} alt="" style={{width:'100%'}} />
+                    </div>
                 </div>
             </div>
         </header>
