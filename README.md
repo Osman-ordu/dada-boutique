@@ -4,6 +4,11 @@
 ![dada4](https://user-images.githubusercontent.com/92692879/196451876-f1a90efd-591f-4b49-bd18-5184ae5fef23.jpg)
 
 
+# Mobil Screen
+
+![mobil-dada](https://user-images.githubusercontent.com/92692879/196452815-53e8ae36-09be-4df6-9b08-4fbe65ac73a4.jpg)
+![mobil-dada2](https://user-images.githubusercontent.com/92692879/196452819-f2a4fc87-5888-4a1c-8294-fbfff6f4b571.jpg)
+
 
 
 
